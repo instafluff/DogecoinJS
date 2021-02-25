@@ -59,7 +59,7 @@ Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
 
 Or by using async/await and getting the wallet info returned:
 ```
-let wallet = await DogeCoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
+let wallet = await Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
 console.log( wallet );
 ```
 
@@ -75,7 +75,7 @@ Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( data ) => {
 
 Or by using async/await and getting the wallet QR code returned:
 ```
-let qrcode = await DogeCoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
+let qrcode = await Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
 var image = document.getElementById( "qrcode" );
 image.src = URL.createObjectURL( qrcode );
 ```
