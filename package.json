@@ -1,6 +1,6 @@
 {
   "name": "dogecoinjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Comfiest Way to get Dogecoin info and events for the Web and NodeJS!",
   "main": "index.js",
   "scripts": {
