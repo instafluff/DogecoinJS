@@ -1,0 +1,37 @@
+{
+  "name": "dogecoinjs",
+  "version": "0.1.0",
+  "description": "The Comfiest Way to get Dogecoin info and events for the Web!",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all --sequential build:*",
+    "build:browserify": "browserify index.js -o ./public/dogecoin.js",
+    "build:version": "node version.js",
+    "build:uglify": "terser --compress --mangle --source-map --output ./public/dogecoin.min.js ./public/dogecoin.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instafluff/DogecoinJS.git"
+  },
+  "keywords": [
+    "Doge",
+    "Dogecoin",
+    "JS",
+    "Instafluff"
+  ],
+  "author": "Instafluff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/instafluff/DogecoinJS/issues"
+  },
+  "homepage": "https://github.com/instafluff/DogecoinJS#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "terser": "^5.6.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "webwebweb": "^1.4.6"
+  }
+}

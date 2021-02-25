@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="../public/dogecoin.min.js"></script>
+	</head>
+	<body>
+		<img id="qrcode" src="" />
+		<script type="text/javascript">
+		( async () => {
+			Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
+				console.log( wallet );
+			} );
+			// OR...
+			// let wallet = await DogeCoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
+			
+			Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( data ) => {
+				console.log( "got qr code!", data );
+				var image = document.getElementById( "qrcode" );
+				image.src = URL.createObjectURL( data );
+			});
+			// OR...
+			// let qrcode = await DogeCoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
+
+			// DogeCoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+			// 	console.log( "Wallet Balance Changed!", address, amount );
+			// } );
+			// DogeCoin.received( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+			// 	console.log( "Received Doge!", address, amount );
+			// } );
+			// DogeCoin.sent( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+			// 	console.log( "Sent Doge!", address, amount );
+			// } );
+			// // Listen to multiple wallets with the same event handler
+			// DogeCoin.listen( [ "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", "FAKEADDRESSdogeDPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" ], ( address, amount, extra ) => {
+			// 	console.log( "Sent Doge!", address, amount );
+			// } );
+		})();
+		</script>
+	</body>
+</html>
