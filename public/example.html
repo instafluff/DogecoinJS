@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script src="../public/dogecoin.min.js"></script>
+		<script src="dogecoin.min.js"></script>
 	</head>
 	<body>
 		<img id="qrcode" src="" />
@@ -11,7 +11,7 @@
 			} );
 			// OR...
 			// let wallet = await DogeCoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
-			
+
 			Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( data ) => {
 				console.log( "got qr code!", data );
 				var image = document.getElementById( "qrcode" );

@@ -1,7 +1,7 @@
 {
   "name": "dogecoinjs",
   "version": "0.1.0",
-  "description": "The Comfiest Way to get Dogecoin info and events for the Web!",
+  "description": "The Comfiest Way to get Dogecoin info and events for the Web and NodeJS!",
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all --sequential build:*",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
+    "pusher-js": "^7.0.3",
     "webwebweb": "^1.4.6"
   }
 }
