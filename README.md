@@ -8,7 +8,7 @@ We built this Dogecoin javascript library live on Twitch for the Comfy Corner!
 
 ## How To Use ##
 
-####Node
+#### Node
 1. Install `dogecoinjs`
 ```
 npm install dogecoinjs --save
