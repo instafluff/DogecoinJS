@@ -10,12 +10,12 @@ We built this Dogecoin javascript library live on Twitch for the Comfy Corner!
 
 #### Node
 1. Install `dogecoinjs`
-```
+```bash
 npm install dogecoinjs --save
 ```
 
 2. Use DogecoinJS
-```
+```javascript
 var Dogecoin = require( "dogecoinjs" );
 Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
 	console.log( wallet );
@@ -24,6 +24,8 @@ Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra 
 	console.log( "Wallet balance update!", address, amount, extra );
 });
 ```
+
+3. More code examples in [example.js](example.js)
 
 #### Browser
 1. Download and add `dogecoinjs` from the `public` folder or include from the JSDelivr CDN:
@@ -54,17 +56,19 @@ OR
 </html>
 ```
 
+3. More code examples in [example.html](public/example.html)
+
 ## Looking Up Dogecoin Wallets
 
 You can lookup the balance of any dogecoin wallet by passing an address and a handler:
-```
+```javascript
 Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
 	console.log( wallet );
 } );
 ```
 
 Or by using async/await and getting the wallet info returned:
-```
+```javascript
 let wallet = await Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
 console.log( wallet );
 ```
@@ -72,7 +76,7 @@ console.log( wallet );
 ## Getting a Dogecoin Wallet QR Code
 
 Get the QR Code image of any dogecoin wallet by passing an address and a handler:
-```
+```javascript
 Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( data ) => {
 	var image = document.getElementById( "qrcode" );
 	image.src = URL.createObjectURL( data );
@@ -80,7 +84,7 @@ Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( data ) => {
 ```
 
 Or by using async/await and getting the wallet QR code returned:
-```
+```javascript
 let qrcode = await Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
 var image = document.getElementById( "qrcode" );
 image.src = URL.createObjectURL( qrcode );
@@ -89,7 +93,7 @@ image.src = URL.createObjectURL( qrcode );
 ## Listening to a Dogecoin Wallet
 
 Get notified of changes to a wallet balance in real-time:
-```
+```javascript
 Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
 	console.log( "Wallet balance update!", address, amount, extra );
 });
