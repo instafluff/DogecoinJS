@@ -15,5 +15,15 @@ var Dogecoin = require( "./index" );
 	});
 
 	// Get a wallet QR Code with async/await
-	let qrcode = await DogeCoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
+	let qrcode = await Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht" );
+
+	// Listen for wallet balance updates
+	Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+		console.log( "Wallet balance update!", address, amount, extra );
+	});
+
+	// Listen to multiple wallets by passing an array
+	// Dogecoin.listen( [ "address1", "address2", ... ], ( address, amount, extra ) => {
+	// 	console.log( "Wallet balance update!", address, amount, extra );
+	// });
 })();
