@@ -115,9 +115,9 @@ var dogecoinJS = {
 			}
 			else {
 				socket.send( JSON.stringify( {
-			        op: "addr_sub",
-			        addr: addr
-			    } ) );
+					op: "addr_sub",
+					addr: addr
+				} ) );
 			}
 		});
 	},
