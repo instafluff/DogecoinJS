@@ -1,7 +1,7 @@
 # DogecoinJS
 ![npm](https://img.shields.io/npm/v/dogecoinjs?style=flat-square) ![GitHub](https://img.shields.io/github/license/instafluff/dogecoinjs?style=flat-square) [![](https://data.jsdelivr.com/v1/package/npm/dogecoinjs/badge)](https://www.jsdelivr.com/package/npm/dogecoinjs)
 
-**DogecoinJS** The Comfiest Way to get Dogecoin info and events for the Web and NodeJS!
+**DogecoinJS** The Goodest Way to get Dogecoin info and events for the Web and NodeJS!
 
 # DogecoinJS
 We built this Dogecoin javascript library live on Twitch for the Comfy Corner!
@@ -18,10 +18,10 @@ npm install dogecoinjs --save
 ```javascript
 var Dogecoin = require( "dogecoinjs" );
 Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
-	console.log( wallet );
+  console.log( wallet );
 } );
 Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
-	console.log( "Wallet balance update!", address, amount, extra );
+  console.log( "Wallet balance update!", address, amount, extra );
 });
 ```
 
@@ -48,9 +48,9 @@ OR
       Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
         console.log( wallet );
       } );
-	  Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
-  		console.log( "Wallet balance update!", address, amount, extra );
-  	});
+      Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+        console.log( "Wallet balance update!", address, amount, extra );
+      });
     </script>
   </body>
 </html>
@@ -63,7 +63,7 @@ OR
 You can lookup the balance of any dogecoin wallet by passing an address and a handler:
 ```javascript
 Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
-	console.log( wallet );
+  console.log( wallet );
 } );
 ```
 
@@ -78,8 +78,8 @@ console.log( wallet );
 Get the QR Code image of any dogecoin wallet by passing an address and a handler:
 ```javascript
 Dogecoin.qrcode( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( data ) => {
-	var image = document.getElementById( "qrcode" );
-	image.src = URL.createObjectURL( data );
+  var image = document.getElementById( "qrcode" );
+  image.src = URL.createObjectURL( data );
 } );
 ```
 
@@ -95,7 +95,7 @@ image.src = URL.createObjectURL( qrcode );
 Get notified of changes to a wallet balance in real-time:
 ```javascript
 Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
-	console.log( "Wallet balance update!", address, amount, extra );
+  console.log( "Wallet balance update!", address, amount, extra );
 });
 ```
 
@@ -108,7 +108,7 @@ Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra 
 
 > https://twitch.tv/instafluff
 
-> *Such coin. Much love.*
+> *Such coin. Much thanks!*
 
 > DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht
 
