@@ -14,12 +14,15 @@ We built this Dogecoin javascript library live on Twitch for the Comfy Corner!
 npm install dogecoinjs --save
 ```
 
-2. Lookup Dogecoin wallet
+2. Use DogecoinJS
 ```
 var Dogecoin = require( "dogecoinjs" );
 Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
 	console.log( wallet );
 } );
+Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+	console.log( "Wallet balance update!", address, amount, extra );
+});
 ```
 
 #### Browser
@@ -32,7 +35,7 @@ OR
 <script src="https://cdn.jsdelivr.net/npm/dogecoinjs@latest/public/dogecoin.min.js"></script>
 ```
 
-2. Lookup Dogecoin wallet
+2. Use DogecoinJS
 ```html
 <html>
   <head>
@@ -43,6 +46,9 @@ OR
       Dogecoin.lookup( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( wallet ) => {
         console.log( wallet );
       } );
+	  Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+  		console.log( "Wallet balance update!", address, amount, extra );
+  	});
     </script>
   </body>
 </html>
@@ -80,10 +86,14 @@ var image = document.getElementById( "qrcode" );
 image.src = URL.createObjectURL( qrcode );
 ```
 
-#### Planned Features
+## Listening to a Dogecoin Wallet
 
-- Listening to Wallet balance changes
-- Received/Sent Dogecoin events
+Get notified of changes to a wallet balance in real-time:
+```
+Dogecoin.listen( "DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht", ( address, amount, extra ) => {
+	console.log( "Wallet balance update!", address, amount, extra );
+});
+```
 
 ## Instafluff ##
 > *Like these projects? The best way to support my open-source projects is by becoming a Comfy Sponsor on GitHub!*
@@ -99,6 +109,8 @@ image.src = URL.createObjectURL( qrcode );
 > DPsvmxqaJV15nqVnT9BiwYskVmQLozRKht
 
 ## Credits ##
+Dogecoin blockchain data is available thanks to [DogeChain](https://dogechain.info/)!
+
 Thank you to everyone who joined in during the creation of this project!
 
 **LilyHazel, Instafriend, Instafluff, DevMerlin, aries4174599, That_MS_Gamer, generalgooglelos, aRandomTim, simrosie4u, Eclipse_Arc, Floydan, m_a_t_t_y___, mikenatsu24, venusslipper, theArtifacts, YourFriendTyler33, MisigaSan, ShadowNeverSeen, aisu_kurimu, durian_gray, d3m1g0d__, KanawanagasakiYoko, Masaki_tty, N3m1sys, DFluxk, nolanpfeiffersaiyan, iknowandidrinkthings, mrpotatodice, Shpoopdy, RafaelPaul, saramara79, lilsafbig, DutchGamer46, AnnaCodes, RiccaRomano, stabbykirby, JupiterZky, allie__, sparky_pugwash, Here_for_the_life_lessons, sethorizer, GanaXE, DvDty, GhosT_TanK83, Gawhisper, Wietlol, MerlinLeWizard, JamesMontemagno, Alca, one1lion, pathaan, hugthedumdum, TofuLock, definiteoptimist, Roxkstar74, Taugeshtu, Mheetu, ricardosexyboyy06, InSanityParty, nopogo_tv, eno_dev, AntiPixelated, hadouken11, seasidesandies, calhartill, NamasteGeek, Alphena, ShiDotMoe, Loganshogun, FuriousFur, Froggo1214, Hot_Zoomy, youcantescapefromme2, Ellenary, TheDankOreo, InvaderWaffles, churzaki, Longttran, DreamGardenPanda, Yuukez, holloway87**
